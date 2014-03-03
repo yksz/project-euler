@@ -8,10 +8,18 @@ import (
 	"fmt"
 )
 
-func main() {
-	num := 4000000
+func fibonacci(max int) *list.List {
+	list := list.New()
+	low, high := 1, 1
+	for high < max {
+		low, high = high, low+high
+		list.PushBack(low)
+	}
+	return list
+}
 
-	l := fibonacci(num)
+func main() {
+	l := fibonacci(4000000)
 	sum := 0
 	for e := l.Front(); e != nil; e = e.Next() {
 		val := e.Value.(int)
@@ -20,15 +28,4 @@ func main() {
 		}
 	}
 	fmt.Println(sum)
-}
-
-func fibonacci(num int) *list.List {
-	list := list.New()
-
-	low, high := 1, 1
-	for high < num {
-		low, high = high, low+high
-		list.PushBack(low)
-	}
-	return list
 }
