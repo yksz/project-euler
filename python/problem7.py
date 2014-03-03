@@ -10,14 +10,11 @@ def list_prime(x):
     search = list(range(2, x+1))
     top = search.pop(0)
     primes.append(top)
-
     while top**2 < x:
         search = list(filter(lambda x: x % top != 0, search))
         top = search.pop(0)
         primes.append(top)
-
     primes.extend(search)
     return primes
-
 
 print(list_prime(150000)[10001-1])

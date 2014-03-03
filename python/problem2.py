@@ -8,17 +8,14 @@
 
 def fibonacci(max):
     lst = []
-
     low, high = 1, 1
     while high < max:
         low, high = high, low+high
         lst.append(low)
     return lst
 
-
 sum = 0
 for i in fibonacci(4000000):
     if i % 2 == 0:
         sum += i
-
 print(sum)

@@ -8,19 +8,15 @@
 def gcd(m, n): # m >= n
     if n > m:
         return gcd(n, m)
-
     if n == 0:
         return m
     else:
         return gcd(n, m % n)
 
-
 def lcm(m, n):
     return m * n / gcd(m, n)
-
 
 x = 1
 for i in range(1, 21):
     x = lcm(x, i)
-
 print(x)

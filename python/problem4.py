@@ -16,12 +16,10 @@ def is_palindromic(s):
         else:
             return False
 
-
 lst = []
 for x in range(100, 1000):
     for y in range(100, 1000):
         n = x * y
         if is_palindromic(str(n)):
             lst.append(n)
-
 print(max(lst))

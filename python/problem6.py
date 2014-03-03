@@ -10,9 +10,7 @@
 # Find the difference between the sum of the squares of the first one hundred natural numbers and the square of the sum.
 
 value = 100
-
 squares = map(lambda x: x*x, range(1, value+1))
 sum_of_squares = sum(squares)
 square_of_sum = sum(range(1, value+1))**2
-
 print(square_of_sum - sum_of_squares)
