@@ -8,7 +8,7 @@
 
 (print
     (sum
-        (map 
+        (map
             (lambda (x)
                 (if (or (= (modulo x 3) 0) (= (modulo x 5) 0))
                     x
