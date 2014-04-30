@@ -3,14 +3,12 @@
 
 (use srfi-1)
 
-(define (sum lis)
+(define lis (map
+                (lambda (x)
+                    (if (or (= (modulo x 3) 0) (= (modulo x 5) 0))
+                        x
+                        0))
+                (iota 1000)))
+(define (sum)
     (fold + 0 lis))
-
-(print
-    (sum
-        (map
-            (lambda (x)
-                (if (or (= (modulo x 3) 0) (= (modulo x 5) 0))
-                    x
-                    0))
-            (iota 1000))))
+(print (sum))

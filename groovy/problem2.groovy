@@ -13,9 +13,7 @@ def fibonacci(max) {
 }
 
 def sum = 0
-for (i in fibonacci(4000000)) {
-    if (i % 2 == 0) {
+for (i in fibonacci(4000000))
+    if (i % 2 == 0)
         sum += i
-    }
-}
 println sum

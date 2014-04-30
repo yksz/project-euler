@@ -5,7 +5,7 @@
 
 let rec range a b =
     if a >= b then []
-    else a :: range (a+1) b
+    else a :: range (a + 1) b
 ;;
 
 let lis = List.filter (fun x -> x mod 3 = 0 || x mod 5 = 0) (range 0 1000);;
