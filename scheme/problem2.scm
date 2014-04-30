@@ -4,11 +4,11 @@
 
 (define fibonacci
     (lambda (x)
-        (cond ((= x 1) 1)
-              ((= x 2) 2)
+        (cond ((= x 0) 0)
+              ((= x 1) 1)
               (else (+ (fibonacci (- x 1)) (fibonacci (- x 2)))))))
 
-(define (fibonacci-lis max)
+(define (fibonacci-list max)
     (define (loop i lis)
         (let ((x (fibonacci i)))
             (if (> x max)
@@ -23,4 +23,4 @@
     (sum
         (filter even? lis)))
 
-(print (sum-of-even (fibonacci-lis 4000000)))
+(print (sum-of-even (fibonacci-list 4000000)))
