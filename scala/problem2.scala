@@ -4,24 +4,14 @@
 
 object Main {
 
-  def fibonacci(x: Int): Int = {
-    if (x == 0)
-      return 0
-    else if (x == 1)
-      return 1
-    else
-      return fibonacci(x - 1) + fibonacci(x - 2)
-  }
-
-  def fibonacciList(max: Int): List[Int] = {
-    def loop(i: Int, list: List[Int]): List[Int] = {
-      val x = fibonacci(i)
-      if (x > max)
+  def fibonacci(max: Int): List[Int] = {
+    def loop(low: Int, high: Int, list: List[Int]): List[Int] = {
+      if (high > max)
         return list
       else
-        return loop(i + 1, x :: list)
+        return loop(high, low + high, high :: list)
     }
-    return loop(1, List())
+    return loop(1, 1, List())
   }
 
   def sum(list: List[Int]): Int = {
@@ -33,7 +23,7 @@ object Main {
   }
 
   def main(args: Array[String]) {
-    println(sumOfEven(fibonacciList(4000000)))
+    println(sumOfEven(fibonacci(4000000)))
   }
 
 }

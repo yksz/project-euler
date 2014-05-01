@@ -4,20 +4,12 @@
  * By considering the terms in the Fibonacci sequence whose values do not exceed four million, find the sum of the even-valued terms.
  *)
 
-let rec fibonacci x =
-    if x = 0 then 0
-    else if x = 1 then 1
-    else fibonacci (x - 1) + fibonacci (x - 2)
-;;
-
-let fibonacci_list max =
-    let rec loop i lis =
-        let x = fibonacci i
-        in
-            if x > max then lis
-            else loop (i + 1) (x :: lis)
+let fibonacci max =
+    let rec loop low high lis =
+        if high > max then lis
+        else loop high (low + high) (high :: lis)
     in
-        loop 1 []
+    loop 1 1 []
 ;;
 
 let sum lis =
@@ -28,4 +20,4 @@ let sum_of_even lis =
     sum (List.filter (fun x -> x mod 2 = 0) lis)
 ;;
 
-Printf.printf "%d\n" (sum_of_even (fibonacci_list 4000000));;
+Printf.printf "%d\n" (sum_of_even (fibonacci 4000000));;
