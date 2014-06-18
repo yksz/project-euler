@@ -9,6 +9,8 @@
                         x
                         0))
                 (iota 1000)))
+
 (define (sum)
     (fold + 0 lis))
+
 (print (sum))
