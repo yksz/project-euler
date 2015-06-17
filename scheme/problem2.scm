@@ -3,17 +3,16 @@
 ;; By considering the terms in the Fibonacci sequence whose values do not exceed four million, find the sum of the even-valued terms.
 
 (define (fibonacci max)
-    (define (loop low high lis)
-        (if (> high max)
-            lis
-            (loop high (+ low high) (cons high lis))))
-    (loop 1 1 '()))
+  (define (loop low high lis)
+    (if (> high max)
+        lis
+        (loop high (+ low high) (cons high lis))))
+  (loop 1 1 '()))
 
 (define (sum lis)
-    (fold + 0 lis))
+  (fold + 0 lis))
 
 (define (sum-of-even lis)
-    (sum
-        (filter even? lis)))
+  (sum (filter even? lis)))
 
 (print (sum-of-even (fibonacci 4000000)))
