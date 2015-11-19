@@ -4,9 +4,8 @@
 
 #include <iostream>
 #include <vector>
-namespace {
 
-void fibonacci(int max, std::vector<int>& vec) {
+static void fibonacci(int max, std::vector<int>& vec) {
     int low = 1;
     int high = 1;
     while (high < max) {
@@ -16,8 +15,6 @@ void fibonacci(int max, std::vector<int>& vec) {
         vec.push_back(high);
     }
 }
-
-} // unnamed namespace
 
 int main(int argc, char** argv) {
     using std::vector;
