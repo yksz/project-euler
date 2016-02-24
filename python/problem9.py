@@ -1,6 +1,5 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-# python3
 
 # A Pythagorean triplet is a set of three natural numbers, a  b  c, for which,
 # a2 + b2 = c2

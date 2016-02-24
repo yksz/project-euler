@@ -1,6 +1,5 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-# python3
 
 # The sum of the squares of the first ten natural numbers is,
 # 12 + 22 + ... + 102 = 385
