@@ -6,11 +6,13 @@
 
 import math
 
+
 def is_square(x2):
     x = int(math.sqrt(x2) + 0.5)
     return x*x == x2
 
-def fermat_factor(n): # n should be odd
+
+def fermat_factor(n):  # n should be odd
     a = math.ceil(math.sqrt(n))
     b2 = a*a - n
     while not is_square(b2):
@@ -20,6 +22,7 @@ def fermat_factor(n): # n should be odd
     x = int(a - b)
     y = int(a + b)
     return x, y
+
 
 def is_prime(x):
     if x < 2:
@@ -35,6 +38,7 @@ def is_prime(x):
         i += 2
     return True
 
+
 def fermat_factors(n, lst):
     x, y = fermat_factor(n)
     if is_prime(x):
@@ -46,10 +50,12 @@ def fermat_factors(n, lst):
     else:
         fermat_factors(y, lst)
 
+
 def prime_factors(n):
     lst = []
     fermat_factors(n, lst)
     return lst
+
 
 lst = prime_factors(600851475143)
 print(lst)

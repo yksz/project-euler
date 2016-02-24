@@ -4,6 +4,7 @@
 # A palindromic number reads the same both ways. The largest palindrome made from the product of two 2-digit numbers is 9009 = 91  99.
 # Find the largest palindrome made from the product of two 3-digit numbers.
 
+
 def is_palindromic(s):
     if len(s) == 1:
         return True
@@ -14,6 +15,7 @@ def is_palindromic(s):
             return is_palindromic(s[1:-1])
         else:
             return False
+
 
 lst = []
 for x in range(100, 1000):

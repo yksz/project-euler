@@ -25,6 +25,7 @@
 
 import re
 
+
 s = """
  73167176531330624919225119674426574742355349194934
  96983520312774506326239578318016984801869478851843
@@ -49,12 +50,12 @@ s = """
 """
 s = re.sub(r'\s', '', s)
 ans = []
-i = 0;
+i = 0
 while i <= len(s)-5:
     part = s[i:i+5]
     product = 1
     for j in part:
         product *= int(j)
     ans.append(product)
-    i += 1;
+    i += 1
 print(max(ans))

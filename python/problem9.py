@@ -9,9 +9,11 @@
 
 import math
 
+
 def is_square(x2):
     x = int(math.sqrt(x2) + 0.5)
     return x*x == x2
+
 
 loop = 1000
 for a in range(1, loop):

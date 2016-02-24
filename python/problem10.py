@@ -4,6 +4,7 @@
 # The sum of the primes below 10 is 2 + 3 + 5 + 7 = 17.
 # Find the sum of all the primes below two million.
 
+
 def list_prime(x):
     primes = []
     search = list(range(2, x+1))
@@ -15,6 +16,7 @@ def list_prime(x):
         primes.append(top)
     primes.extend(search)
     return primes
+
 
 primes = list_prime(2000000)
 print(sum(primes))
